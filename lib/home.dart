@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // third
   bool loading = true;
   late File _image;
   late List _output;
@@ -71,8 +72,11 @@ class _HomePageState extends State<HomePage> {
     detectimage(_image);
   }
 
+  // third
+
   @override
   Widget build(BuildContext context) {
+    // first
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -91,7 +95,10 @@ class _HomePageState extends State<HomePage> {
               height: 150,
               width: 150,
               padding: const EdgeInsets.all(10),
-              child: const Icon(Icons.masks),
+              child: const Icon(
+                Icons.masks,
+                size: 150,
+              ),
             ),
             Container(
               child: Text(
@@ -103,6 +110,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 50),
+            // first
+
+            //second
             Container(
               child: Column(
                 children: [
@@ -118,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       onPressed: () {
-                        pickimage_camera();
+                        pickimage_camera(); //
                       },
                       child: Text(
                         'Capture',
@@ -139,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       onPressed: () {
-                        pickimage_gallery();
+                        pickimage_gallery(); //
                       },
                       child: Text(
                         'Gallery',
@@ -150,6 +160,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            // fourth
             loading != true
                 ? Container(
                     child: Column(
@@ -176,6 +187,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   )
                 : Container()
+            // fourth
           ],
         ),
       ),
